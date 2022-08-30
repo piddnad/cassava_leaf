@@ -1,0 +1,23 @@
+authorName: default
+experimentName: vit_base_patch16_384_lr
+trialConcurrency: 2
+maxExecDuration: 72h
+maxTrialNum: 50
+#choice: local, remote, pai
+trainingServicePlatform: local
+searchSpacePath: search_space_lr.json
+#choice: true, false
+useAnnotation: false
+tuner:
+  #choice: TPE, Random, Anneal, Evolution, BatchTuner, MetisTuner, GPTuner
+  #SMAC (SMAC should be installed through nnictl)
+  builtinTunerName: GridSearch
+#  classArgs:
+#    #choice: maximize, minimize
+#    optimize_mode: maximize
+trial:
+  command: python train_nni_lr.py
+  codeDir: .
+  gpuNum: 1
+localConfig:
+  useActiveGpu: true

@@ -1,0 +1,5 @@
+{
+  "t1": {"_type":"quniform", "_value":[0.0, 1.0, 0.1]},
+  "t2": {"_type":"quniform", "_value":[1.0, 4.0, 0.1]},
+  "label_smoothing": {"_type":"quniform", "_value":[0.0, 0.9, 0.1]}
+}
